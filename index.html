@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saravan V — AI & Full Stack Developer</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Syne:wght@400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">Saravan<span>V</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certificates" class="nav-link">Certificates</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO SECTION ===================== -->
+  <section class="hero" id="home">
+    <!-- Animated background blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <!-- Grid overlay -->
+    <div class="grid-overlay"></div>
+    <!-- Particles -->
+    <canvas id="particles"></canvas>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">
+          <span class="bracket">&lt;</span> Hello World <span class="bracket">/&gt;</span>
+        </p>
+        <h1 class="hero-name">Hi, I'm <span class="name-glow">Saravan V</span></h1>
+        <div class="hero-typing">
+          <span class="static-text">I'm a </span>
+          <span class="typed-text" id="typedText"></span>
+          <span class="cursor">|</span>
+        </div>
+        <p class="hero-desc">
+         Full-stack developer building AI-integrated products — LLM API integration (Groq, Hugging Face),
+  FastAPI/Flask backends, and ML-powered systems. Currently pursuing B.E. CSE at Dr. AIT, Bengaluru.
+        </p>
+        <div class="hero-cta">
+          <!-- Replace href with actual mailto or contact link -->
+          <a href="#contact" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i> Hire Me
+          </a>
+          <!-- Replace resume.pdf with your actual resume file path -->
+          <a href="Resume_AI.pdf" download class="btn btn-outline">
+            <i class="fas fa-download"></i> Resume
+          </a>
+        </div>
+        <div class="hero-socials">
+          
+          <a href="https://www.linkedin.com/in/saravan-v-5b50a2293" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/Saravan-08" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <!-- Replace your-instagram-id with your actual Instagram username -->
+          <!-- <a href="https://www.instagram.com/your-instagram-id" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a> -->
+          <a href="mailto:saravan0801@gmail.com" class="social-icon" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-image-wrap">
+        <div class="hero-ring ring-outer"></div>
+        <div class="hero-ring ring-inner"></div>
+        <!-- Replace images/profile.jpg with your actual profile image -->
+        <img src="images/profile.jpg" alt="Saravan V" class="hero-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="hero-img-fallback">
+          <i class="fas fa-user-astronaut"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <a href="#about" class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-arrow"><i class="fas fa-chevron-down"></i></div>
+    </a>
+  </section>
+
+  <!-- ===================== ABOUT SECTION ===================== -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// About Me</span>
+        <h2 class="section-title">Who Am I?</h2>
+      </div>
+
+      <div class="about-grid">
+        <!-- Profile card -->
+        <div class="about-image-col reveal">
+          <div class="profile-card">
+            <div class="profile-glow-border">
+              <!-- Replace images/profile.jpg with your actual profile image -->
+              <img src="images/profile.jpg" alt="Saravan V" class="profile-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+              <div class="profile-img-fallback">
+                <i class="fas fa-user-astronaut"></i>
+              </div>
+            </div>
+            <div class="profile-badge">
+              <i class="fas fa-code"></i> Full Stack Dev
+            </div>
+          </div>
+        </div>
+
+        <!-- Text content -->
+        <div class="about-text-col reveal">
+          <p class="about-desc">
+  I'm a <strong>full-stack developer focused on AI integration</strong> — I build products
+  that connect LLM APIs, machine learning models, and clean frontends into complete workflows.
+  My stack includes <strong>Python, FastAPI, Flask, JavaScript/React</strong>, and LLM provider
+  integration (Groq, Hugging Face). Currently pursuing B.E. CSE at
+  <strong>Dr. Ambedkar Institute of Technology, Bengaluru</strong>.
+</p>
+          <p class="about-desc">
+            I'm passionate about building intelligent, scalable solutions that blend
+            <strong>AI/ML capabilities</strong> with clean, intuitive interfaces. I believe in
+            continuous learning and love turning real-world problems into elegant digital solutions.
+          </p>
+
+          <div class="focus-tags">
+  <span class="tag">LLM Integration</span>
+  <span class="tag">FastAPI & Python</span>
+  <span class="tag">Flask</span>
+  <span class="tag">Machine Learning</span>
+  <span class="tag">REST APIs</span>
+  <span class="tag">React & JavaScript</span>
+  <span class="tag">AI Product Engineering</span>
+</div>
+
+          <div class="about-info">
+            <div class="info-item"><i class="fas fa-map-marker-alt"></i> Bengaluru, India</div>
+            <div class="info-item"><i class="fas fa-phone"></i> +91-8147241983</div>
+            <div class="info-item"><i class="fas fa-envelope"></i> saravan0801@gmail.com</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats cards -->
+      <div class="stats-grid reveal">
+        <div class="stat-card glass">
+          <i class="fas fa-folder-open stat-icon"></i>
+          <div class="stat-number" data-count="3">0</div>
+          <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="stat-card glass">
+          <i class="fas fa-certificate stat-icon"></i>
+          <div class="stat-number" data-count="7">0</div>
+          <div class="stat-label">Certifications Earned</div>
+        </div>
+        <!-- <div class="stat-card glass">
+          <i class="fas fa-laptop-code stat-icon"></i>
+          <div class="stat-number" data-count="15">0</div>
+          <div class="stat-label">Technologies Learned</div>
+        </div> -->
+        <div class="stat-card glass">
+          <i class="fas fa-trophy stat-icon"></i>
+          <div class="stat-number" data-count="4">0</div>
+          <div class="stat-label">Hackathons Participated</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EDUCATION SECTION ===================== -->
+  <section class="section education-section" id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// Education</span>
+        <h2 class="section-title">My Journey</h2>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass">
+            <div class="tl-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="tl-content">
+              <span class="tl-date">Sep 2023 – Present</span>
+              <h3 class="tl-title">B.E. in Computer Science & Engineering</h3>
+              <p class="tl-place">Dr. Ambedkar Institute of Technology, Bengaluru</p>
+              <div class="tl-badge">CGPA: 8.38</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass">
+            <div class="tl-icon"><i class="fas fa-rocket"></i></div>
+            <div class="tl-content">
+              <span class="tl-date">Ongoing</span>
+              <h3 class="tl-title">NxtWave CCBP 4.0 Fellowship</h3>
+              <p class="tl-place">Full Stack Development with AI/ML</p>
+              <div class="tl-badge">Industry-Ready Program</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass">
+            <div class="tl-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+            <div class="tl-content">
+              <span class="tl-date">Training & Workshops</span>
+              <h3 class="tl-title">Professional Development</h3>
+              <p class="tl-place">Multiple Institutions & Communities</p>
+              <ul class="tl-list">
+                <li><i class="fas fa-chevron-right"></i> Machine Learning Bootcamp — GDG</li>
+                <li><i class="fas fa-chevron-right"></i> Web Development Training</li>
+                <li><i class="fas fa-chevron-right"></i> AI/ML Learning Programs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SKILLS SECTION ===================== -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// Skills</span>
+        <h2 class="section-title">Tech Arsenal</h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- Frontend -->
+        <div class="skills-category glass reveal">
+          <h3 class="skills-cat-title"><i class="fas fa-palette"></i> Frontend</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>HTML5</span><span>90%</span></div>
+              <div class="bar-track"><div class="bar-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>CSS3</span><span>85%</span></div>
+              <div class="bar-track"><div class="bar-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>JavaScript</span><span>80%</span></div>
+              <div class="bar-track"><div class="bar-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>React</span><span>70%</span></div>
+              <div class="bar-track"><div class="bar-fill" data-width="70"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skills-category glass reveal">
+          <h3 class="skills-cat-title"><i class="fas fa-server"></i> Backend</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+  <div class="skill-info"><span>FastAPI</span><span>80%</span></div>
+  <div class="bar-track"><div class="bar-fill" data-width="80"></div></div>
+</div>
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>Python</span><span>85%</span></div>
+              <div class="bar-track"><div class="bar-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>Flask</span><span>80%</span></div>
+              <div class="bar-track"><div class="bar-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-bar-item">
+  <div class="skill-info"><span>LLM APIs (Groq, HF)</span><span>75%</span></div>
+  <div class="bar-track"><div class="bar-fill" data-width="75"></div></div>
+</div>
+          </div>
+        </div>
+
+        <!-- Database -->
+        <div class="skills-category glass reveal">
+          <h3 class="skills-cat-title"><i class="fas fa-database"></i> Database</h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>MySQL</span><span>80%</span></div>
+              <div class="bar-track"><div class="bar-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-info"><span>SQLite</span><span>75%</span></div>
+              <div class="bar-track"><div class="bar-fill" data-width="75"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other Skills -->
+        <div class="skills-category glass reveal">
+          <h3 class="skills-cat-title"><i class="fas fa-microchip"></i> Other Skills</h3>
+          <div class="skill-tags-grid">
+            <span class="skill-pill"><i class="fas fa-brain"></i> Machine Learning</span>
+            <span class="skill-pill"><i class="fas fa-plug"></i> REST APIs</span>
+            <span class="skill-pill"><i class="fab fa-git-alt"></i> Git / GitHub</span>
+            <span class="skill-pill"><i class="fas fa-layer-group"></i> Full Stack</span>
+            <span class="skill-pill"><i class="fas fa-chart-bar"></i> Data Analysis</span>
+            <span class="skill-pill"><i class="fas fa-mobile-alt"></i> Responsive Design</span>
+          </div>
+        </div>
+        <!-- AI / LLM -->
+<div class="skills-category glass reveal">
+  <h3 class="skills-cat-title"><i class="fas fa-brain"></i> AI / LLM</h3>
+  <div class="skill-tags-grid">
+    <span class="skill-pill"><i class="fas fa-comments"></i> LLM API Integration</span>
+    <span class="skill-pill"><i class="fas fa-terminal"></i> Prompt Engineering</span>
+    <span class="skill-pill"><i class="fas fa-exchange-alt"></i> Provider Fallback</span>
+    <span class="skill-pill"><i class="fas fa-chart-line"></i> Random Forest</span>
+    <span class="skill-pill"><i class="fas fa-wave-square"></i> LSTM</span>
+    <span class="skill-pill"><i class="fas fa-image"></i> Hugging Face API</span>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJECTS SECTION ===================== -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// Projects</span>
+        <h2 class="section-title">What I've Built</h2>
+      </div>
+
+      <div class="projects-grid">
+
+
+        <!-- Project 0 — AI Chat App (MOST RELEVANT) -->
+        <div class="project-card glass reveal">
+          <div class="project-accent"></div>
+          <div class="project-icon"><i class="fas fa-robot"></i></div>
+          <h3 class="project-title">AI Chat App — LLM Integration</h3>
+          <p class="project-desc">Full-stack AI chat app: FastAPI backend integrating Groq's LLM API with a local Ollama fallback. Single-server deployment with Pydantic validation, 30s timeouts, and graceful error handling.</p>
+          <div class="project-tags">
+            <span class="ptag">Python</span>
+            <span class="ptag">FastAPI</span>
+            <span class="ptag">Groq LLM</span>
+            <span class="ptag">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Saravan-08/ai-chat-app" target="_blank" class="plink plink-gh"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+        <!-- Project 1 -->
+        <div class="project-card glass reveal">
+          <div class="project-accent"></div>
+          <div class="project-icon"><i class="fas fa-charging-station"></i></div>
+          <h3 class="project-title">EVon – Smart EV Charging System</h3>
+          <p class="project-desc">EV charging demand prediction system with slot booking, wait-time prediction, and an admin monitoring dashboard powered by LSTM models.</p>
+          <div class="project-tags">
+            <span class="ptag">Python</span>
+            <span class="ptag">Flask</span>
+            <span class="ptag">Machine Learning</span>
+            <span class="ptag">LSTM</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Saravan-08/EVon" target="_blank" class="plink plink-gh"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <!-- <div class="project-card glass reveal">
+          <div class="project-accent"></div>
+          <div class="project-icon"><i class="fas fa-seedling"></i></div>
+          <h3 class="project-title">Farm2Home</h3>
+          <p class="project-desc">Platform connecting farmers directly with consumers for organic product ordering, cutting middlemen and optimizing farmer profits.</p>
+          <div class="project-tags">
+            <span class="ptag">HTML</span>
+            <span class="ptag">CSS</span>
+            <span class="ptag">JavaScript</span>
+            <span class="ptag">Flask</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/Saravan-08/YOUR-EWASTE-REPO" target="_blank" class="plink plink-gh"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div> -->
+
+        <!-- Project 3 -->
+        <div class="project-card glass reveal">
+          <div class="project-accent"></div>
+          <div class="project-icon"><i class="fas fa-recycle"></i></div>
+          <h3 class="project-title">E-Waste Classification System</h3>
+          <p class="project-desc">AI-based e-waste image classification using Hugging Face API with React frontend and Flask backend, providing disposal guidance.</p>
+          <div class="project-tags">
+            <span class="ptag">JavaScript</span>
+            <span class="ptag">Flask</span>
+            <span class="ptag">Hugging Face</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/your-github" target="_blank" class="plink plink-gh"><i class="fab fa-github"></i> GitHub</a>
+            <!-- <a href="https://your-live-demo-link.com" target="_blank" class="plink plink-live"><i class="fas fa-external-link-alt"></i> Demo</a> -->
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <!-- <div class="project-card glass reveal">
+          <div class="project-accent"></div>
+          <div class="project-icon"><i class="fas fa-landmark"></i></div>
+          <h3 class="project-title">Culture Connect</h3>
+          <p class="project-desc">Heritage and cultural event management system featuring guide booking, traditional UI design, and MySQL-powered backend.</p>
+          <div class="project-tags">
+            <span class="ptag">Python</span>
+            <span class="ptag">Flask</span>
+            <span class="ptag">MySQL</span>
+            <span class="ptag">HTML/CSS</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/your-github" target="_blank" class="plink plink-gh"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://your-live-demo-link.com" target="_blank" class="plink plink-live"><i class="fas fa-external-link-alt"></i> Demo</a>
+          </div>
+        </div> -->
+
+        <!-- Project 5 -->
+        <!-- <div class="project-card glass reveal">
+          <div class="project-accent"></div>
+          <div class="project-icon"><i class="fas fa-user-astronaut"></i></div>
+          <h3 class="project-title">Portfolio Website</h3>
+          <p class="project-desc">Responsive interactive developer portfolio with modern dark-neon UI/UX, smooth animations, and mobile-first responsive design principles.</p>
+          <div class="project-tags">
+            <span class="ptag">HTML5</span>
+            <span class="ptag">CSS3</span>
+            <span class="ptag">JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/your-github" target="_blank" class="plink plink-gh"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://your-live-demo-link.com" target="_blank" class="plink plink-live"><i class="fas fa-external-link-alt"></i> Demo</a>
+          </div>
+        </div> -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CERTIFICATES SECTION ===================== -->
+  <section class="section certs-section" id="certificates">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// Achievements</span>
+        <h2 class="section-title">Certificates & Awards</h2>
+      </div>
+
+      <div class="certs-grid">
+
+        <div class="cert-card glass reveal">
+          <div class="cert-icon"><i class="fas fa-trophy"></i></div>
+          <h4 class="cert-title">Asthrava Hackathon</h4>
+          <p class="cert-place">Dr. Ambedkar Institute of Technology</p>
+          <div class="cert-badge">Hackathon</div>
+        </div>
+
+        <div class="cert-card glass reveal">
+          <div class="cert-icon"><i class="fab fa-google"></i></div>
+          <h4 class="cert-title">Google Solution Challenge 2025</h4>
+          <p class="cert-place">Dr. Ambedkar Institute of Technology</p>
+          <div class="cert-badge">Global Challenge</div>
+        </div>
+
+        <div class="cert-card glass reveal">
+          <div class="cert-icon"><i class="fas fa-bolt"></i></div>
+          <h4 class="cert-title">TechSprint Technical Event</h4>
+          <p class="cert-place">Dr. Ambedkar Institute of Technology</p>
+          <div class="cert-badge">Technical Event</div>
+        </div>
+
+        <div class="cert-card glass reveal">
+          <div class="cert-icon"><i class="fas fa-lightbulb"></i></div>
+          <h4 class="cert-title">Aikyam IPR Conclave</h4>
+          <p class="cert-place">RVMIT</p>
+          <div class="cert-badge">Innovation</div>
+        </div>
+
+        <div class="cert-card glass reveal">
+          <div class="cert-icon"><i class="fas fa-brain"></i></div>
+          <h4 class="cert-title">Machine Learning Bootcamp</h4>
+          <p class="cert-place">Google Developer Groups (GDG)</p>
+          <div class="cert-badge">ML / AI</div>
+        </div>
+
+        <div class="cert-card glass reveal">
+          <div class="cert-icon"><i class="fas fa-globe"></i></div>
+          <h4 class="cert-title">Build Your Own Static Website</h4>
+          <p class="cert-place">NxtWave CCBP 4.0</p>
+          <div class="cert-badge">Web Dev</div>
+        </div>
+
+        <div class="cert-card glass reveal">
+          <div class="cert-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h4 class="cert-title">Build Responsive Website</h4>
+          <p class="cert-place">NxtWave CCBP 4.0</p>
+          <div class="cert-badge">Web Dev</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT SECTION ===================== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// Contact</span>
+        <h2 class="section-title">Let's Connect</h2>
+      </div>
+
+      <div class="contact-grid">
+
+        <!-- Contact Info -->
+        <div class="contact-info reveal">
+          <h3 class="contact-info-title">Get In Touch</h3>
+          <p class="contact-info-desc">I'm actively looking for opportunities. Whether you have a project, a question, or just want to say hi — my inbox is always open!</p>
+
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <div class="cd-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div><strong>Location</strong><br/>Bengaluru, Karnataka, India</div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="cd-icon"><i class="fas fa-phone"></i></div>
+              <div><strong>Phone</strong><br/>+91-8147241983</div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="cd-icon"><i class="fas fa-envelope"></i></div>
+              <div><strong>Email</strong><br/>saravan0801@gmail.com</div>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <!-- Replace your-linkedin-id with actual LinkedIn username -->
+            <a href="https://www.linkedin.com/in/saravan-v-5b50a2293" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <!-- Replace your-github-id with actual GitHub username -->
+            <a href="https://github.com/Saravan-08" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="mailto:saravan0801@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <!-- <div class="contact-form-wrap reveal">
+          <div class="glass contact-form-card"> -->
+            <!--
+              FORMSPREE SETUP:
+              1. Go to https://formspree.io and create an account.
+              2. Create a new form and copy the endpoint URL.
+              3. Replace "https://formspree.io/f/your-form-id" below with your actual Formspree endpoint.
+            -->
+            <!-- <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Full Name *</label>
+                  <input type="text" id="name" name="name" placeholder="John Doe" required />
+                  <span class="form-error" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" placeholder="john@example.com" required />
+                  <span class="form-error" id="emailError"></span>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" />
+                </div>
+                <div class="form-group">
+                  <label for="subject">Subject *</label>
+                  <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required />
+                  <span class="form-error" id="subjectError"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                <span class="form-error" id="messageError"></span>
+              </div>
+              <button type="submit" class="btn btn-primary form-submit" id="submitBtn">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div> -->
+        <!-- Email Me Card -->
+<div class="contact-form-wrap reveal">
+  <div class="glass contact-form-card email-me-card">
+    <div class="email-me-icon">
+      <i class="fas fa-envelope-open-text"></i>
+    </div>
+    <h3 class="email-me-title">Let's Talk</h3>
+    <p class="email-me-desc">
+      Have a project, an opportunity, or just want to say hi? My inbox is always open — I usually reply within 24 hours.
+    </p>
+    <a href="mailto:saravan0801@gmail.com?subject=Hello%20Saravan&body=Hi%20Saravan%2C%0A%0AI%20came%20across%20your%20portfolio%20and%20wanted%20to%20reach%20out..." 
+       class="btn btn-primary email-me-btn">
+      <i class="fas fa-paper-plane"></i> Email Me
+    </a>
+    <div class="email-me-alt">
+      <span>or copy my email:</span>
+      <code>saravan0801@gmail.com</code>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-grid container">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo">Saravan<span>V</span></a>
+        <p class="footer-tagline">Turning ideas into intelligent digital experiences.</p>
+      </div>
+      <div class="footer-links-col">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certificates">Certificates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social-col">
+        <h4>Find Me Online</h4>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/saravan-v-5b50a2293" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Saravan-08" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+          <!-- <a href="https://www.instagram.com/your-instagram-id" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a> -->
+          <a href="mailto:saravan0801@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Designed &amp; Developed by <span class="name-glow">Saravan V</span> &copy; <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Success Popup -->
+  <div class="popup-overlay" id="popupOverlay">
+    <div class="popup glass">
+      <div class="popup-icon"><i class="fas fa-check-circle"></i></div>
+      <h3>Message Sent!</h3>
+      <p>Thanks for reaching out. I'll get back to you soon.</p>
+      <button class="btn btn-primary" id="popupClose">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
